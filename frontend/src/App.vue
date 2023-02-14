@@ -34,6 +34,11 @@ export default {
   height: 100vh;
 
   overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 img {
