@@ -1,21 +1,30 @@
 <template>
   <img alt="background" src="./static/img/background.jpg" />
-  <Loginmodal msg="Welcome to Your Vue.js App" v-if="showLoginmodal"/>
+  <Loginmodal :msg="msg" v-if="showLoginmodal"/>
+  <Addfirst :msg="msg" v-if="showFirstUser" />
 </template>
 
 <script>
 import Loginmodal from './components/Loginmodal.vue'
+import Addfirst from './components/Addfirst.vue'
 
 export default {
+  
   name: 'App',
+
   components: {
-    Loginmodal
+    Loginmodal,
+    Addfirst,
   },
+
   data() {
     return {
-      showLoginmodal: true,
+      showLoginmodal: false,
+      showFirstUser: true,
+      msg: '',
     }
   },
+
 }
 </script>
 
